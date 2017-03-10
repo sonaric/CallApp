@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ProgramCall</string>
+    <string name="action_settings">Settings</string>
+    <string name="tab_call">Calls</string>
+    <string name="tab_history">History</string>
+    <string name="tab_contact">Contacts</string>
+    <string name="btn_add_contact">Add contact</string>
+    <string name="menu_delete_contact">Delete</string>
+    <string name="menu_add_contact">New</string>
+    <string name="menu_update_contact">Update</string>
+    <string name="toast_text_empty">Field empty!</string>
+    <string name="menu_clear_number">Clear</string>
+    <string name="menu_add_to_contact">Add to contact</string>
+    <string name="menu_contact_to_call">To input panel</string>
+</resources>

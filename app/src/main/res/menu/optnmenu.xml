@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Setting"
+        android:id="@+id/menu_setting"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:showAsAction="never" />
+    <item android:title="More"
+        android:id="@+id/menu_more"
+        android:icon="@android:drawable/ic_menu_more"
+        android:showAsAction="never">
+        <menu>
+            <item android:title="About"
+                android:id="@+id/menu_about"
+                android:icon="@android:drawable/ic_menu_preferences"
+                android:showAsAction="never" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/menu_exit"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="Exit"
+        android:showAsAction="never">
+    </item>
+</menu>

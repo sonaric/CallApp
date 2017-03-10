@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Дзвонилка</string>
+    <string name="action_settings">Налаштування</string>
+    <string name="tab_call">Дзвінки</string>
+    <string name="tab_history">Історія</string>
+    <string name="tab_contact">Контакти</string>
+    <string name="btn_add_contact">Додати контакт</string>
+    <string name="menu_delete_contact">Видалити</string>
+    <string name="menu_add_contact">Новий</string>
+    <string name="menu_update_contact">Оновити</string>
+    <string name="toast_text_empty">Поле пусте!</string>
+    <string name="menu_clear_number">Очистити</string>
+    <string name="menu_add_to_contact">Додати до контатів</string>
+    <string name="menu_contact_to_call">На панель набору</string>
+</resources>
