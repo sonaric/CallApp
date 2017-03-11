@@ -7,6 +7,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.util.ArraySet;
@@ -27,6 +29,13 @@ public class Calls extends AppCompatActivity implements View.OnClickListener {
     Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, bstar, bsharp, badd;
     ImageButton bcall, bbackspace, bmessage;
     TextView numberInput;
+
+    final int MAX_STREAMS=1;
+
+    SoundPool sp;
+    int soundIdClick;
+
+    int streamIDClick;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +83,10 @@ public class Calls extends AppCompatActivity implements View.OnClickListener {
         bbackspace.setOnClickListener(this);
 
         registerForContextMenu(numberInput);
+
+        sp=new SoundPool(MAX_STREAMS, AudioManager.STREAM_MUSIC,0);
+
+        soundIdClick=sp.load(this,R.raw.buttonclick,1);
 
     }
 
@@ -172,6 +185,7 @@ public class Calls extends AppCompatActivity implements View.OnClickListener {
                 break;
 
             case R.id.badd:
+                sp.play(soundIdClick,1,1,0,0,1);
                 String []data={getString(R.string.menu_add_contact),getString(R.string.menu_update_contact)};
                 AlertDialog.Builder builder=new AlertDialog.Builder(this);
                 builder.setTitle( getString(R.string.btn_add_contact) )
