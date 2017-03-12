@@ -55,6 +55,8 @@ public class MainActivity extends TabActivity {
             tv.setTextSize( 14 );
         }
 
+
+        startService(new Intent(this,CallMessageForUser.class));
     }
 
     @Override
@@ -98,6 +100,8 @@ public class MainActivity extends TabActivity {
         SharedPreferences.Editor ed=sPref.edit();
         ed.putBoolean( "read_contact",false );
         ed.commit();
+
+
     }
 
     public void switchTab(String tag){

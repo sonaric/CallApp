@@ -23,7 +23,13 @@
         <activity android:name=".Contacts" />
         <activity android:name=".Calls" />
         <activity android:name=".Histories" />
-        <activity android:name=".AddContactActivity"></activity>
+        <activity android:name=".AddContactActivity" />
+
+        <service
+            android:name=".CallMessageForUser"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":messageprocess"></service>
     </application>
 
 </manifest>
