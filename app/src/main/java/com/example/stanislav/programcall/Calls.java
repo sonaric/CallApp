@@ -118,6 +118,12 @@ public class Calls extends AppCompatActivity implements View.OnClickListener {
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        sp.release();
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.b0:
@@ -185,7 +191,7 @@ public class Calls extends AppCompatActivity implements View.OnClickListener {
                 break;
 
             case R.id.badd:
-                sp.play(soundIdClick,1,1,0,0,1);
+                streamIDClick=sp.play(soundIdClick,1,1,1,0,1);
                 String []data={getString(R.string.menu_add_contact),getString(R.string.menu_update_contact)};
                 AlertDialog.Builder builder=new AlertDialog.Builder(this);
                 builder.setTitle( getString(R.string.btn_add_contact) )
