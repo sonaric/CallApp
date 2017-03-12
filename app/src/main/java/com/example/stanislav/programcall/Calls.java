@@ -192,6 +192,7 @@ public class Calls extends AppCompatActivity implements View.OnClickListener {
 
             case R.id.badd:
                 streamIDClick=sp.play(soundIdClick,1,1,1,0,1);
+
                 String []data={getString(R.string.menu_add_contact),getString(R.string.menu_update_contact)};
                 AlertDialog.Builder builder=new AlertDialog.Builder(this);
                 builder.setTitle( getString(R.string.btn_add_contact) )
