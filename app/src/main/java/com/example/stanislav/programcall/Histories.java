@@ -24,9 +24,7 @@ public class Histories extends AppCompatActivity {
 
     File directory;
     final int TYPE_PHOTO=1;
-
     final int REQUEST_CODE_PHOTO=1;
-
     ImageView ivPhoto;
 
     @Override
