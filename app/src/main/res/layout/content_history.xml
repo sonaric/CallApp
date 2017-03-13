@@ -8,7 +8,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:srcCompat="@android:color/darker_gray"
+        app:srcCompat="@color/grayBlack"
         android:id="@+id/ivPhoto"
         android:scaleType="centerCrop"
         android:background="@color/grayBlack" />
