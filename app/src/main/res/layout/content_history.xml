@@ -10,5 +10,6 @@
         android:layout_height="match_parent"
         app:srcCompat="@android:color/darker_gray"
         android:id="@+id/ivPhoto"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:background="@color/grayBlack" />
 </LinearLayout>
