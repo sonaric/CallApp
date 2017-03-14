@@ -62,6 +62,7 @@ public class Histories extends Activity {
         };
 
         getBackgroundBitmap(savedText,this);
+        progressBar.setVisibility(View.INVISIBLE);
 }
 
     private void getBackgroundBitmap(final String uri, final Histories parent){
