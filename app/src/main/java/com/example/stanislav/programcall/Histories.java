@@ -65,20 +65,28 @@ public class Histories extends Activity {
 }
 
     private void getBackgroundBitmap(final String uri, final Histories parent){
+
         progressBar.setVisibility(View.VISIBLE);
+
         Thread t=new Thread(new Runnable() {
+
             Message msg;
+
             @Override
             public void run() {
+
                 Bitmap bitmap = null;
+
                 if(!uri.equals("")) {
                     try {
+
                         bitmap = MediaStore.Images.Media.getBitmap(parent.getContentResolver(), Uri.parse(uri));
                         Matrix matrix = new Matrix();
                         matrix.postRotate(90);
                         bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
                         msg=h.obtainMessage(1,0,0,bitmap);
                         h.sendMessage(msg);
+
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -108,17 +116,21 @@ public class Histories extends Activity {
     }
 
     private  Uri generateFileUri(int type){
+
         File file=null;
+
         switch (type){
             case TYPE_PHOTO:
                 file=new File(directory.getPath()+"/"+"photo_"+ String.valueOf(System.currentTimeMillis())+".jpg");
 
                 break;
         }
+
         SharedPreferences sPref=getSharedPreferences( "contactTransport",MODE_PRIVATE );
         SharedPreferences.Editor ed=sPref.edit();
         ed.putString( "photobackground",Uri.fromFile(file).toString());
         ed.commit();
+
         return Uri.fromFile(file);
     }
 
