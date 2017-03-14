@@ -56,13 +56,15 @@ public class Histories extends Activity {
                         ivPhoto.setImageBitmap((Bitmap) msg.obj);
                         progressBar.setVisibility(View.INVISIBLE);
                         break;
+                    case 2:
+                        progressBar.setVisibility(View.INVISIBLE);
+                        break;
                 }
 
             }
         };
 
         getBackgroundBitmap(savedText,this);
-        progressBar.setVisibility(View.INVISIBLE);
 }
 
     private void getBackgroundBitmap(final String uri, final Histories parent){
@@ -89,6 +91,7 @@ public class Histories extends Activity {
                         h.sendMessage(msg);
 
                     } catch (IOException e) {
+                        h.sendEmptyMessage(2);
                         e.printStackTrace();
                     }
                 }
