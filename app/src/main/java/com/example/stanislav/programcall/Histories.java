@@ -46,6 +46,8 @@ public class Histories extends Activity {
         SharedPreferences sPref=getSharedPreferences( "contactTransport",MODE_PRIVATE );
         String savedText = sPref.getString( "photobackground", "" );
 
+        progressBar.setVisibility(View.INVISIBLE);
+
         h=new Handler(){
             @Override
             public void handleMessage(Message msg) {
